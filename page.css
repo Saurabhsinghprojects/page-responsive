@@ -1,0 +1,168 @@
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400,700,800,300);
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans','Helvetica Neue',Helvetica, sans-serif;
+    line-height: 1.45;
+}
+header {
+  color: #FFFFFF;
+  background-color: darkkhaki;
+  padding: 80px 0;
+  text-align: center;
+}
+section {
+  padding: 40px 0;
+  text-align: center;
+}
+.features {
+  background: #FFFFFF;
+  color: #000000;
+}
+.quote {
+  background: darkkhaki;
+  color:#FFFFFF;
+}
+footer {
+  background: #353535;
+  padding: 32px 0;
+  text-align: center;
+  color: #868686;
+}
+h1{
+    font-size:48px;
+    margin:0 0 16px 0;
+}
+h2{
+    font-weight: 300;
+    font-size:24px;
+    margin:0 0 16px 0;
+}
+.container{
+    margin:0 auto; 
+    /* taki center me rahe */
+    padding:0 20px 0 20px;
+    max-width:900px;
+}
+/* Since our header takes the full width of the browser, we limited the maximum width the text container can have to 900px using the max-width property.
+This makes the div stop expanding so that the text does not get too wide. */
+.btn{
+  display: inline-block;
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+  background: #549DA0;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 16px;
+  cursor: pointer;
+}
+.btn :hover{
+  background: #468486;
+}
+.feature{
+  display:inline-block;
+  /* inline-block horizontally align krne ke liye */
+  width:32%;
+  /* because there are 3 features so for each feature we set width of 32% and rest will be space */
+  font-size: 32px;
+}
+.feature img{
+  width:40%;
+  /* 40% width of the container will contain image */
+}
+blockquote{
+  margin:0;
+  padding: 0;
+  text-align: center;
+}
+blockquote p{
+  margin: 0 0 5px 0;
+  font-size: 24px;
+}
+blockquote cite{
+  font-size: 16px;
+  font-style: italic;
+}
+blockquote cite:before{
+  content: '-';
+  /* we use the :before selector to set a dash before the cite element. */
+/* We could have added the dash in the text of the cite tag, but this is a fancier way of doing the same thing. */
+  margin-right: 5px;
+}
+footer{
+  background:#353535;
+  padding:32px 0;
+  text-align:center;
+  color:#868686;
+  font-size: 12px;
+}
+footer ul{
+  margin:0;
+  padding:0;
+  list-style: none;
+}
+footer li{
+  display: inline-block;
+}
+footer li a{
+  padding:6px;
+  font-size: 14px;
+  text-decoration: none;
+  color:#c3c3c3;
+}
+footer li a:hover{
+  color: white;
+}
+
+/* Responsive */
+@media screen and (max-width: 480px) {
+  .btn{
+    display: block;
+    font-size: 18px;
+  }
+  h1{
+    font-size: 32px;
+    margin: 0 0 8px 0;
+  }
+  h2{
+    font-size: 18px;
+  }
+  section{
+    padding:25px 0 15px 0;
+  }
+  .feature{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    margin:0 0 10px 0;
+    font-size: 16px;
+  }
+  /* We changed the width of each feature div to 100% and set the display property to flex which makes the div a flexbox container. This allows us to position the child features horizontally and also set the alignment of its child elements -- the icon and the text -- using the align-items and justify-content properties. */
+/* We also set the width of the icons and defined some margins. */
+/* Now, the features will be aligned next to each other on larger screens and under each other on smaller screens. */
+  .feature img{
+    width: 15%;
+    min-width: 60px;
+    margin-right: 20px;
+  }
+  .quote{
+    padding:30px 0;
+  }
+  blockquote p{
+    font-size: 18px;
+  }
+  blockquote cite{
+    font-size: 14px;
+  }
+  footer{
+    padding:30px 0 10px 0;
+  }
+  footer li{
+    display: block;
+    margin:5px 0;
+  }
+}
